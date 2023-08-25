@@ -61,7 +61,7 @@
         6   New_Price          824 non-null    object
         7   Price              6019 non-null   float64
 
-- <h3 style="display:inline">describe()</h3><br>
+- <h2>describe()</h2>
   এটি সবচেয়ে গুরুত্তপূর্ণ একটি ফাংশন! যা ডেটাসেটের বিভিন্ন পরিসংখ্যান মূলক তথ্য সম্পর্কে ধারণা প্রদান করে। যেমন: গড়, সর্বনিম্ন, সর্বচ্চো, আদর্শ বিচ্যুতি।
 
 ```python
