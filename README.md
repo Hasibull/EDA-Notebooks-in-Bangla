@@ -124,7 +124,7 @@
     Electric       2
     Name: Fuel_Type, dtype: int64
 
-<h1>কিছু example notebooks</h1>
+<h2>উদাহরণ হিসেবে কিছু notebooks</h2>
 উপরে উল্লেখিত ফাংশন গুলোর প্রয়োগ সম্পর্কে ধারণা পেরে নিচের notebook গুলো দেখতে পারেন!
 
 - **[used car price notebook](https://github.com/Hasibull/EDA-Notebooks-in-Bangla/blob/master/notebooks/used-car-price-EDA.ipynb)**
