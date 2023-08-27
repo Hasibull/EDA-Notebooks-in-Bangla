@@ -1,5 +1,5 @@
-### Read the full guide before contribution
+<h1 align="center">কন্ট্রিবিউশন করার আগে পড়ে নিন!</h1>
 
-- Look around the repo and get the insights of this repo.
-- Maintain the folder structure.
-- Ensure the file name in proper way i.e. `used-car-price-EDA.ipynb`.
+- আপনার কোন EDA এর notebook যুক্ত করতে পারেন।
+- ভালো হয় যদি notebook টিতে markdown দিয়ে কিছু hints ও দেয়া থাকে
+- আপাতত এইটুকুই!! :slightly_smiling_face:
