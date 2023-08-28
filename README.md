@@ -1,15 +1,15 @@
 <h1 align="center">বাংলায় EDA (Exploratory data analysis)!!</h1>
 <!-- copywrite - https://github.com/Hasibull -->
-মেশিন-লার্নিং বা ডেটা সাইন্সের সাহায্যে কোন সমস্যা সমাধান করার প্রথম ধাপ হলো সমস্যাটি সম্পর্কে ভালো ভাবে ধারনা নেয়া (Gathering Domain Knowledge)। এর পরেই যে<!-- copywrite - https://github.com/Hasibull --> কাজটি গুরুত্বপূর্ণ তা হলো সমস্যা সমাধানের জন্য প্রয়জনীয় ডেটা সংগ্রহ করা (Data Collection)। তারপর ডেটা কে স্টাডি করে তা থেকে বিভিন্ন প্রয়োজনীয় তথ্য খুজে বের করা বা বিভিন্ন ধারণা সংগ্রহ করার কাজটিই মূলত **EDA** বা **Exploratory Data Analysis** হিসেবে পরিচিত।
-<!-- copywrite - https://github.com/Hasibull -->
+মেশিন-লার্নিং বা ডেটা সাইন্সের সাহায্যে কোন সমস্যা সমাধান করার প্রথম ধাপ হলো সমস্যাটি সম্পর্কে ভালো ভাবে ধারনা নেয়া (Gathering Domain Knowledge)। এর পরেই যে কাজটি গুরুত্বপূর্ণ তা হলো সমস্যা সমাধানের জন্য প্রয়জনীয় ডেটা সংগ্রহ করা (Data Collection)। তারপর ডেটা কে স্টাডি করে তা থেকে বিভিন্ন প্রয়োজনীয় তথ্য খুজে বের করা বা বিভিন্ন ধারণা সংগ্রহ করার কাজটিই মূলত **EDA** বা **Exploratory Data Analysis** হিসেবে পরিচিত।
+
 আমাদের এই রিপো (Repository) টির মূল উদ্দেশ্যই হলো কিভাবে ডেটা থেকে বিভিন্ন কৌশল ব্যাবহার করে কার্যকরী তথ্য পাওয়া সম্ভব। আমরা এখানে **python** এর একটি খুবই জনপ্রিয় লাইব্রেরী **pandas** এ থাকা বিভিন্ন ফাংশন ব্যাবহার করে কিভাবে কার্যকরী ভাবে EDA (Exploratory data analysis) করতে পারি তা শেখার চেষ্টা করবো!
 
-**_একটা কথা মাথায় রাখবেন_**-<br><!-- copywrite - https://github.com/Hasibull -->
+**_একটা কথা মাথায় রাখবেন_**-<br>
 `ডেটা হলো আসামির মতো! আসামি কে যেমন একটু ভালোভাবে সাইজ করলে অনেক তথ্য বেরিয়ে আসে ঠিক তেমনি ডেটা কে একটু ভালোভাবে পর্যবেক্ষণ করলে অনেক প্রয়োজনীয় তথ্য পাওয়া সম্ভব!`:smiley:
 
-- <h2>head()/tail() নাকি sample()<!-- copywrite - https://github.com/Hasibull --></h2>
+- <h2>head()/tail() নাকি sample()</h2>
   আমরা সাধারণত আমাদের কাছে থাকা ডেটাসেট টি pandas দিয়ে Read করার পরে প্রথমে যে কাজটি করে থাকি তা হলো ডেটাসেটির একটা ওভারভিউ নেয়ার জন্য **head()** ফাংশন ব্যাবহার করে থাকি যা ডেটাসেটির শুরুর কিছু সংখ্যক সারি (row) প্রদর্শন করে। কিন্তু অনেক সময় দেখা যায় ডেটাসেটের শুরুর দিকের ডেটার সাথে পরবর্তী ডেটা গুলোর তেমন কোন মিল নেই বা শুরুর দিকের ডেটা গুলো অনেক পরিপাটি! তাই আমরা চাইলেই এই head() ফাংশনের পরিবর্তে **sample()** ফাংশন ব্যাবহার করতে পারি যা আমাদের কে ডেটাসেটির বিভিন্ন অংশ হতে নির্দিষ্ট সংখ্যক সারি প্রদর্শন করে।
-<!-- copywrite - https://github.com/Hasibull -->
+
 ```python
     dataframe_name.head(number_of_sample) # display row from top
     dataframe_name.tail(number_of_sample) # display row from end
@@ -21,9 +21,9 @@
     df.sample(10)
 ```
 
-- <h2>shape</h2><!-- copywrite - https://github.com/Hasibull -->
+- <h2>shape</h2>
   ডেটাসেটে কতগুলো row এবং column রয়েছে তা জানার জন্য আমরা **shape** অ্যাট্রিবিউট টি ব্যাবহার করতে পারি। **shape** কিন্তু অ্যাট্রিবিউট, ফাংশন নয়!
-<!-- copywrite - https://github.com/Hasibull -->
+
 ```python
     dataframe_name.shape
 
@@ -36,17 +36,17 @@
         (6019, 7)
 
 এখানে 6019 টি row এবং 7 টি column নির্দেশ করছে!
-<!-- copywrite - https://github.com/Hasibull -->
+
 - <h2>info()</h2>
   ডেটাসেটের প্রতিটি column এ কি টাইপের ডেটা রয়েছে এবং প্রতিটি column এ কতগুলো ডেটা non-null ডেটা রয়েছে তা জানার জন্য আমরা **info()** ফাংশন ব্যাবহার করতে পারি!
-<!-- copywrite - https://github.com/Hasibull -->
+
 ```python
     dataframe_name.info()
 
     i.e:
     df.info()
 ```
-<!-- copywrite - https://github.com/Hasibull -->
+
 **_output_** দেখতে যেমন **:**
 
         RangeIndex: 6019 entries, 0 to 6018
@@ -62,26 +62,26 @@
         7   Price              6019 non-null   float64
 
 
-- <h2>isnull()</h2><!-- copywrite - https://github.com/Hasibull -->
+- <h2>isnull()</h2>
   ডেটাসেটের প্রতিটি column এ কতগুলো ডেটা null বা missing রয়েছে তা জানার জন্য **isnull()** ফাংশনটি অনেক কার্যকরী। তবে শেষে **sum()** ফাংশন যুক্ত করতে ভুল করা যাবে না!!
-<!-- copywrite - https://github.com/Hasibull -->
+
 ```python
     dataframe_name.isnull().sum()
 
     i.e:
     df.isnull().sum()
 ```
-<!-- copywrite - https://github.com/Hasibull -->
+
 - <h2>dropna()</h2>
   আমরা চাইলে null ডেটাগুলো বাদ দিয়ে দিতে পারি **dropna()** ফাংশন ব্যাবহার করে। এই ফাংশনটির মূল সমস্যাটি হলো এটি কোন row এর একটি column এও যদি null ডেটা থাকে তাহলে পুরো row টিই remove করে দেয়! সেক্ষেত্রে যদি কোন column এ অধিক সংখ্যক null ডেটা থাকে তাহলে আমরা অনেক প্রয়োজনীয় ডেটা হারিয়ে ফেলবো, তাই এর চেয়ে আমরা অধিক null ডেটা থাকা column টিকেই remove করে দিতে পারি! **বিঃদ্রঃ আপনার কাজের উপর ভিত্তি করে null ডেটা প্রসেস করার আরও অনেক পদ্ধতি রয়েছে (যেমন, fillna()) তা প্রয়োগ করা যেতে পারে।**
-<!-- copywrite - https://github.com/Hasibull -->
+
 ```python
     dataframe_name.dropna()
 
     i.e:
     df.dropna()
 ```
-<!-- copywrite - https://github.com/Hasibull -->
+
 - <h2>describe()</h2>
   এটি সবচেয়ে গুরুত্তপূর্ণ একটি ফাংশন! যা ডেটাসেটের বিভিন্ন পরিসংখ্যান মূলক তথ্য সম্পর্কে ধারণা প্রদান করে। যেমন: গড়, সর্বনিম্ন, সর্বচ্চো, আদর্শ বিচ্যুতি।
 
@@ -92,7 +92,7 @@
     df.describe()
 ```
 
-**_output_** দেখতে যেমন **:**<!-- copywrite - https://github.com/Hasibull -->
+**_output_** দেখতে যেমন **:**
 
         	volt	        rotate	        pressure	vibration	failure
     count	36600.00	36600.00	36600.00	36600.00	36600.00
@@ -104,9 +104,9 @@
     75%	172.489968	456.346770	101.611061	40.832505	0.000000
     max	218.265191	493.381312	152.314600	61.113082	1.0
 
-- <h2>value_counts()</h2><!-- copywrite - https://github.com/Hasibull -->
+- <h2>value_counts()</h2>
   আমাদের ব্যাবহার করা ডেটাসেটে যদি কোন column এ ক্যাটেগরিক্যাল (যেমন, gender, color, e.t.c) থাকে তাহলে কোন কোন ডেটাটি কতবার রয়েছে তা দেখার জন্য আমরা **value_counts()** ফাংশনটি ব্যাবহার করতে পারি।
-<!-- copywrite - https://github.com/Hasibull -->
+
 ```python
     dataframe_name.column_name.value_counts()
     dataframe_name['column_name'].value_counts()
@@ -114,7 +114,7 @@
     i.e:
     df['Fuel_Type'].value_counts()
 ```
-<!-- copywrite - https://github.com/Hasibull -->
+
 **_output_** দেখতে যেমন **:**
 
     Diesel      3205
@@ -129,4 +129,3 @@
 
 - **[used car price notebook](https://github.com/Hasibull/EDA-Notebooks-in-Bangla/blob/master/notebooks/used-car-price-EDA.ipynb)**
 
-<!-- copywrite - https://github.com/Hasibull -->
