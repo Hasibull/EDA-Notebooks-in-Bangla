@@ -1,5 +1,5 @@
 <h1 align="center">বাংলায় EDA (Exploratory data analysis)!!</h1>
-<!-- copywrite - https://github.com/Hasibull -->
+
 মেশিন-লার্নিং বা ডেটা সাইন্সের সাহায্যে কোন সমস্যা সমাধান করার প্রথম ধাপ হলো সমস্যাটি সম্পর্কে ভালো ভাবে ধারনা নেয়া (Gathering Domain Knowledge)। এর পরেই যে কাজটি গুরুত্বপূর্ণ তা হলো সমস্যা সমাধানের জন্য প্রয়জনীয় ডেটা সংগ্রহ করা (Data Collection)। তারপর ডেটা কে স্টাডি করে তা থেকে বিভিন্ন প্রয়োজনীয় তথ্য খুজে বের করা বা বিভিন্ন ধারণা সংগ্রহ করার কাজটিই মূলত **EDA** বা **Exploratory Data Analysis** হিসেবে পরিচিত।
 
 আমাদের এই রিপো (Repository) টির মূল উদ্দেশ্যই হলো কিভাবে ডেটা থেকে বিভিন্ন কৌশল ব্যাবহার করে কার্যকরী তথ্য পাওয়া সম্ভব। আমরা এখানে **python** এর একটি খুবই জনপ্রিয় লাইব্রেরী **pandas** এ থাকা বিভিন্ন ফাংশন ব্যাবহার করে কিভাবে কার্যকরী ভাবে EDA (Exploratory data analysis) করতে পারি তা শেখার চেষ্টা করবো!
@@ -60,7 +60,6 @@
         5   Fuel_Type          6019 non-null   object
         6   New_Price          824 non-null    object
         7   Price              6019 non-null   float64
-
 
 - <h2>isnull()</h2>
   ডেটাসেটের প্রতিটি column এ কতগুলো ডেটা null বা missing রয়েছে তা জানার জন্য **isnull()** ফাংশনটি অনেক কার্যকরী। তবে শেষে **sum()** ফাংশন যুক্ত করতে ভুল করা যাবে না!!
@@ -128,4 +127,3 @@
 উপরে উল্লেখিত ফাংশন গুলোর প্রয়োগ সম্পর্কে ধারণা পেরে নিচের notebook গুলো দেখতে পারেন!
 
 - **[used car price notebook](https://github.com/Hasibull/EDA-Notebooks-in-Bangla/blob/master/notebooks/used-car-price-EDA.ipynb)**
-
